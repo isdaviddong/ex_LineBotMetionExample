@@ -32,3 +32,38 @@
 ```
 
 欽此，沒了，不用謝。
+
+# Line Webhook Example
+
+This is a Line Webhook example demonstrating the mention feature using the new SDK (2.14.40).
+
+## Features
+
+The main features of this Webhook are as follows:
+1. Receive message events from Line.
+2. Reply to the text messages sent by users.
+3. Check if other users are mentioned in the message and display the mentioned user IDs in the reply.
+4. If the bot itself is mentioned, it will be marked in the reply.
+
+## Usage
+
+1. Replace `ChannelAccessToken` and `AdminUserId` in `LineWebHookController.cs` with your Line Bot information.
+2. Deploy this project to your server.
+3. Set the Webhook URL of your Line official account to your server address.
+
+## Example
+
+When a user sends the message "Hello" and mentions other users using @, the bot will reply:
+```
+You said: Hello
+Users mentioned:
+  U1234567890...mentioned.
+```
+If the bot itself is mentioned, it will reply:
+```
+You said: Hello
+Users mentioned:
+  U1234567890...mentioned. (This account is the bot itself)
+```
+
+That's it, no need to thanks me.
